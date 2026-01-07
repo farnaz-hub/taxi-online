@@ -28,7 +28,7 @@
                         <tr>
                             <td>{{$trip->customer?->first_name}}</td>
                             <td>{{$trip->driver?->first_name}}</td>
-                            <td>{{$trip->car?->model}}</td>
+                            <td>{{$trip->car?->model->title}}</td>
                             <td>{{$trip->origin}}</td>
                             <td>{{$trip->destination}}</td>
                             <td>{{$trip->price}}</td>

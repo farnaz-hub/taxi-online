@@ -43,7 +43,7 @@ class TripController extends Controller
 
     public function list()
     {
-        $trips = Car::all();
+        $trips = Trip::all();
         return view('trip.list', compact('trips'));
     }
 
