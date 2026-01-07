@@ -137,5 +137,59 @@
                 }
             })
         }
+
+        function saveAddress() {
+            $.ajax({
+                url: $('#saveAddress').attr('action'),
+                method: 'POST',
+                data: $('#saveAddress').serializeArray(),
+                success: function (result) {
+                    $.ajax({
+                        url: '{{route('address.list', ['customer' => 'id'])}}'.replace('id', $('[name="customer_id"]').val()),
+                        method: 'GET',
+                        success: function (result) {
+                            $('.modal-body').html(result);
+                        }
+                    })
+                }
+            })
+        }
+
+        function updateAddress() {
+            $.ajax({
+                url: $('#updateAddress').attr('action'),
+                method: 'POST',
+                data: $('#updateAddress').serializeArray(),
+                success: function (result) {
+                    $.ajax({
+                        url: '{{route('address.list', ['customer' => 'id'])}}'.replace('id', $('[name="customer_id"]').val()),
+                        method: 'GET',
+                        success: function (result) {
+                            $('.modal-body').html(result);
+                        }
+                    })
+                }
+            })
+        }
+
+        function deleteAddress(el) {
+            $.ajax({
+                url: $(el).attr('href'),
+                method: 'DELETE',
+                data: {
+                    _token: '{{csrf_token()}}'
+                },
+                success: function (result) {
+                    $.ajax({
+                        url: '{{route('address.list', ['customer' => 'id'])}}'.replace('id', $('[name="customer_id"]').val()),
+                        method: 'GET',
+                        success: function (result) {
+                            $('.modal-body').html(result);
+                        }
+                    })
+                }
+            })
+        }
+
     </script>
 @endsection

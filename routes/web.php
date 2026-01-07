@@ -67,7 +67,7 @@ Route::post('/address/save', [\App\Http\Controllers\AddressController::class, 's
 Route::get('/address', [\App\Http\Controllers\AddressController::class, 'list'])->name('address.list');
 Route::get('/address/{address}', [\App\Http\Controllers\AddressController::class, 'show'])->name('address.show');
 Route::post('/address/update/{address}', [\App\Http\Controllers\AddressController::class, 'update'])->name('address.update');
-Route::get('/address/delete/{address}', [\App\Http\Controllers\AddressController::class, 'delete'])->name('address.delete');
+Route::delete('/address/delete/{address}', [\App\Http\Controllers\AddressController::class, 'delete'])->name('address.delete');
 
 //make
 Route::get('/make/add', [\App\Http\Controllers\MakeController::class, 'add'])->name('make.add');

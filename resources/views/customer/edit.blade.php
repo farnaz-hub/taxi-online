@@ -81,7 +81,7 @@
                             <div class="form-group row">
                                 <label class="col-sm-3 col-form-label">Date of Birth</label>
                                 <div class="col-sm-9">
-                                    <input class="form-control" name="birth_date" placeholder="dd/mm/yyyy"
+                                    <input class="form-control" type="date" name="birth_date" placeholder="dd/mm/yyyy"
                                            value="{{$customer->birth_date}}">
                                 </div>
                             </div>

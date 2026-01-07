@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('trips', function (Blueprint $table) {
             $table->id();
-            $table->integer('customer_id');
-            $table->integer('driver_id');
-            $table->integer('car_id');
+            $table->foreignId('customer_id')->constrained();
+            $table->foreignId('driver_id')->constrained();
+            $table->foreignId('car_id')->constrained();
             $table->string('origin');
             $table->string('destination');
             $table->unsignedInteger('price')->nullable();

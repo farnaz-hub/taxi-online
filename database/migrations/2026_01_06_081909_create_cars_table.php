@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer('driver_id');
             $table->integer('make_id');
-            $table->integer('model_id');
+            $table->foreignId('model_id')->constrained();
             $table->date('manufacture_year')->nullable();
             $table->string('color')->nullable();
             $table->boolean('technical_inspection')->nullable();
