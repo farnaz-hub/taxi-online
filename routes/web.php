@@ -14,7 +14,7 @@ Route::get('/login', [\App\Http\Controllers\LoginController::class, 'form'])->na
 Route::post('/login', [\App\Http\Controllers\LoginController::class, 'enter'])->name('login.enter');
 
 //logout
-//Route::get('/logout', [\App\Http\Controllers\LoginController::class, 'logout'])->name('logout');
+Route::get('/logout', [\App\Http\Controllers\LogoutController::class, 'logout'])->name('logout');
 
 //dashboard
 Route::get('/dashboard', [\App\Http\Controllers\DashboardController::class, 'dashboard'])->name('dashboard');

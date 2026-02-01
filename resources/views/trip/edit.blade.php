@@ -3,7 +3,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title text-center" style="margin-bottom: 40px">Adding Trip</h4>
+                <h4 class="card-title text-center" style="margin-bottom: 40px">Editing Trip</h4>
                 <form method="post" action="{{route('trip.update', ['trip' => $trip])}}">
                     @csrf
                     <div class="row">               {{-- row = 1 --}}

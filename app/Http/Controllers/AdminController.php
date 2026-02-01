@@ -20,6 +20,7 @@ class AdminController extends Controller
             'username' => $request->get('username'),
             'password' => Hash::make($request->get('password')),
         ]);
+
         return redirect(route('admin.list'));
     }
 
