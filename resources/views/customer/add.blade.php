@@ -125,8 +125,7 @@
                             </div>
                         </div>
                     </div>
-                    <h6 class="card-title text-center" style="margin-top: 30px; margin-bottom: 30px">Customer
-                        Address</h6>
+                    <h6 class="card-title text-center" style="margin-top: 30px; margin-bottom: 30px">Customer  Address</h6>
                     <div class="address-wrap">               {{-- row = address --}}
                         <div class="col-md-12">
                             <div class="form-group row">

@@ -40,12 +40,12 @@
                                     VIP
                                 @elseif($car->car_type == 3)
                                     Van
-                                @endif</td>
-                            <td>
-                                <a href="{{route('car.show', ['car' => $car])}}" class="btn btn-info btn-sm">Edit</a>
-                                <a href="{{route('car.delete', ['car' => $car])}}"
-                                   class="btn btn-danger btn-sm">Delete</a>
+                                @endif
                             </td>
+                            <x-button
+                                :edit-url="route('car.show', $car)"
+                                :delete-url="route('car.delete', $car)"
+                            />
                         </tr>
                     @endforeach
                     </tbody>
